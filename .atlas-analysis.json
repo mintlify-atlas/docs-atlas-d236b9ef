@@ -1,0 +1,66 @@
+{
+  "projectType": "saas",
+  "projectName": "Freelegal",
+  "projectDescription": "A platform connecting clients seeking legal representation with law firms and account managers for pro bono services",
+  "theme": "linden",
+  "primaryColor": "#1e3a8a",
+  "lightColor": "#fbbf24",
+  "darkColor": "#1e40af",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/case-submission",
+              "features/user-roles",
+              "features/dashboards",
+              "features/leaderboard"
+            ]
+          },
+          {
+            "group": "User Guides",
+            "pages": [
+              "guides/clients",
+              "guides/account-managers",
+              "guides/legal-representatives"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "resources/faq",
+              "resources/support"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Pro bono case submission with anonymous option",
+    "Multi-role user system for clients, account managers, and legal representatives",
+    "Case management with status tracking",
+    "Interest expression system for law firms",
+    "Leaderboard and gamification for legal representatives",
+    "Role-specific dashboards"
+  ],
+  "publicApiSurface": [
+    "/submit - Case submission form",
+    "/login - User authentication",
+    "/register - User registration (3 user types)",
+    "/firmdashboard - Law firm case portal",
+    "/managerdashboard - Account manager case management",
+    "Case status tracking (New, In Progress)",
+    "Legal categories (Abuse, Family Law, Immigration, Housing/Tenancy, Employment, Consumer Rights, Criminal Defense)"
+  ]
+}

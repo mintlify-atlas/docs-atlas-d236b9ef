@@ -1,0 +1,250 @@
+---
+title: Dashboards
+description: Explore the dashboard interfaces for legal representatives and account managers
+---
+
+Freelegal provides specialized dashboards for different user roles, each designed to facilitate efficient case management and assignment workflows.
+
+## Firm dashboard
+
+The firm dashboard is the primary interface for legal representatives to browse cases and manage their pro bono commitments.
+
+### Dashboard overview
+
+<img src="/images/firm-dashboard.png" alt="Firm dashboard interface" />
+
+The dashboard provides a clean, tabbed interface with two main views:
+
+- **Available Cases** - Browse all cases open for representation
+- **My Interested Cases** - Track cases where you've expressed interest
+
+### Navigation tabs
+
+The dashboard includes two primary tabs:
+
+<Tabs>
+  <Tab title="Available cases">
+    This tab displays all pro bono cases that are currently available for firms to express interest in.
+
+    #### Table columns
+
+    - **ID** - Unique case identifier (e.g., #1, #2)
+    - **Title** - Brief description of the legal issue
+    - **Category** - Legal category (Housing/Tenancy, Family Law, Employment, etc.)
+    - **Date** - Case submission date (YYYY-MM-DD format)
+    - **Status** - Current case status badge
+    - **Actions** - Available actions for the case
+
+    #### Available actions
+
+    - **View** - Opens full case details including description and client information
+    - **Express Interest** - Indicates your firm's willingness to take the case
+
+    <Note>
+      When you express interest in a case, account managers are notified and will review your firm's qualifications before making an assignment.
+    </Note>
+  </Tab>
+
+  <Tab title="My interested cases">
+    This tab shows all cases where your firm has expressed interest, allowing you to track the status of potential assignments.
+
+    #### Table structure
+
+    The table uses the same column structure as Available Cases:
+    - ID, Title, Category, Date, Status, and Actions
+
+    #### Available actions
+
+    - **View** - Review case details
+    - **Withdraw Interest** - Remove your expression of interest if you can no longer take the case
+
+    <Warning>
+      Withdrawing interest should only be done if circumstances change. Frequent withdrawals may affect your firm's reputation and leaderboard standing.
+    </Warning>
+  </Tab>
+</Tabs>
+
+### Case status badges
+
+Cases are marked with visual status indicators:
+
+| Status | Appearance | Meaning |
+|--------|------------|----------|
+| New | Blue badge (bg-blue-100, text-blue-900) | Recently submitted case |
+| In Progress | Yellow badge (bg-yellow-100, text-yellow-900) | Case has been assigned or is being reviewed |
+
+### Typical workflow
+
+<Steps>
+  <Step title="Browse available cases">
+    Navigate to the "Available Cases" tab to see all cases open for representation.
+  </Step>
+
+  <Step title="Review case details">
+    Click the "View" button to read the full case description, category, and client information.
+  </Step>
+
+  <Step title="Express interest">
+    If the case matches your firm's expertise and capacity, click "Express Interest" to notify account managers.
+  </Step>
+
+  <Step title="Monitor interested cases">
+    Switch to "My Interested Cases" tab to track cases where you've expressed interest and await assignment confirmation.
+  </Step>
+
+  <Step title="Manage commitments">
+    Use the "Withdraw Interest" button if your firm's circumstances change and you can no longer take a case.
+  </Step>
+</Steps>
+
+## Manager dashboard
+
+Account managers use this dashboard to review submitted cases, assign them to appropriate firms, and monitor the overall health of the pro bono network.
+
+### Dashboard overview
+
+The manager dashboard provides comprehensive case management tools and visibility into firm participation through the leaderboard.
+
+### Navigation tabs
+
+<Tabs>
+  <Tab title="Available">
+    Shows all cases that have not yet been assigned to a firm.
+
+    #### Case table
+
+    - **ID** - Unique case identifier
+    - **Title** - Case title as submitted by client
+    - **Category** - Legal category classification
+    - **Date** - Submission date
+    - **Status** - New or In Progress badge
+    - **Actions** - View and Assign buttons
+
+    #### Manager actions
+
+    - **View** - Review full case details to determine appropriate assignment
+    - **Assign** - Manually assign the case to a qualified firm
+
+    <Note>
+      When assigning cases, consider the legal category, firm expertise, and current workload. Check the leaderboard to identify active firms.
+    </Note>
+  </Tab>
+
+  <Tab title="Assigned">
+    Displays all cases that have been assigned to law firms for representation.
+
+    #### Monitoring assignments
+
+    This view helps account managers:
+    - Track case progression
+    - Monitor firm follow-through
+    - Identify cases that may need reassignment
+
+    #### Available actions
+
+    - **View** - Check case details and assignment history
+    - **Withdraw assignment** - Remove assignment if firm cannot proceed
+
+    <Warning>
+      Only withdraw assignments in consultation with the assigned firm. Unexpected withdrawals can disrupt client service.
+    </Warning>
+  </Tab>
+</Tabs>
+
+### Case management features
+
+#### Status tracking
+
+The dashboard uses the same status badge system as the firm dashboard:
+- **New** (blue) - Recently submitted
+- **In Progress** (yellow) - Active case with firm engagement
+
+#### Case table functionality
+
+Both tabs display cases in a responsive table format with:
+- Sortable columns
+- Horizontal scrolling on smaller screens
+- Clear action buttons for each case
+- Visual status indicators
+
+### Leaderboard section
+
+The manager dashboard includes a dedicated leaderboard section displaying firm rankings based on participation and completed work.
+
+<Note>
+  The leaderboard appears below the case tables and provides motivation for firms to engage with the pro bono program.
+</Note>
+
+See the [Leaderboard](/features/leaderboard) page for detailed information about the point system and firm recognition.
+
+## Common dashboard elements
+
+### Navigation bar
+
+Both dashboards feature a consistent navigation bar:
+- Fixed at the top of the page
+- Blue background (bg-blue-900)
+- Freelegal logo linking to home
+- Always visible during scrolling
+
+### Case table design
+
+All case tables share common design elements:
+
+```tsx
+- Header row with gray background (bg-gray-50)
+- Alternating row styles for readability
+- Responsive design with horizontal scrolling
+- Consistent button styling
+- Icon indicators where appropriate
+```
+
+### Action buttons
+
+#### View button
+- Gray border with white background
+- File icon indicator
+- Hover effect (bg-gray-100)
+- Used to display full case details
+
+#### Primary action buttons
+- **Express Interest / Assign** - Yellow background (bg-yellow-500)
+- **Withdraw / Withdraw assignment** - Gray border, white background
+- Clear hover states for all interactive elements
+
+<CardGroup cols={2}>
+  <Card title="For legal representatives" icon="building">
+    Use the firm dashboard to:
+    - Find cases matching your expertise
+    - Express interest in multiple cases
+    - Track your active commitments
+    - Build your firm's reputation
+  </Card>
+  <Card title="For account managers" icon="user-tie">
+    Use the manager dashboard to:
+    - Triage incoming cases
+    - Match cases with appropriate firms
+    - Monitor case progression
+    - Recognize top-performing firms
+  </Card>
+</CardGroup>
+
+## Best practices
+
+### For legal representatives
+
+1. **Check the dashboard regularly** - New cases are added frequently
+2. **Act quickly on good matches** - Express interest promptly when you see suitable cases
+3. **Keep commitments** - Only express interest if you can realistically take the case
+4. **Update your status** - Withdraw interest immediately if circumstances change
+
+### For account managers
+
+1. **Review cases promptly** - Clients are waiting for assignment
+2. **Consider firm expertise** - Match case categories with firm specializations
+3. **Monitor the leaderboard** - Identify highly engaged firms for priority assignments
+4. **Communicate clearly** - Ensure firms understand case requirements before assignment
+
+<Note>
+  Both dashboards are designed for efficiency. The tabbed interface minimizes navigation time and keeps relevant information readily accessible.
+</Note>
